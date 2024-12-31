@@ -23,7 +23,7 @@ jobs:
       - name: Scan Docker Image
         run: |
           docker build -t facebook-group-engagement .
-          ./trivy image facebook-group-engagement > trivy_report.txt
+          trivy image facebook-group-engagement > trivy_report.txt
 
       - name: Upload Trivy Report
         uses: actions/upload-artifact@v3

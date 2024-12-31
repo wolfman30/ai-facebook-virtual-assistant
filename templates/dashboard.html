@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Facebook Engagement Dashboard</h1>
+
+        <!-- Summary Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Summary</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Posts:</strong> {{ summary['post'] }}</li>
+                    <li><strong>Comments:</strong> {{ summary['comment'] }}</li>
+                    <li><strong>Responses:</strong> {{ summary['response'] }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Interactions Table -->
+        <div class="card">
+            <div class="card-header">
+                <h4>Logged Interactions</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Group</th>
+                            <th>Content</th>
+                            <th>Timestamp</th>
+                            <th>Metadata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for interaction in interactions %}
+                        <tr>
+                            <td>{{ interaction.interaction_type }}</td>
+                            <td>{{ interaction.group_name }}</td>
+                            <td>{{ interaction.content }}</td>
+                            <td>{{ interaction.timestamp }}</td>
+                            <td>{{ interaction.metadata }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="mt-4">
+            <a href="/log_interaction" class="btn btn-primary">Log New Interaction</a>
+            <a href="/export" class="btn btn-secondary">Export Interactions</a>
+        </div>
+    </div>
+</body>
+</html>

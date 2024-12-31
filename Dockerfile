@@ -31,4 +31,5 @@ RUN useradd -m appuser && chown -R appuser /app
 USER appuser
 
 # Set the default command to run the application
-CMD ["python", "main.py"]
+CMD ["coverage", "run", "-m", "unittest", "discover", "-s", "src/tests"]
+

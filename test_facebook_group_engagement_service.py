@@ -11,17 +11,17 @@ class TestFacebookGroupEngagement(unittest.TestCase):
         )
 
     def test_group_joining_logs_metrics(self):
-        success = self.engagement_service.track_joined_group(self.sample_group)
+        success = self.engagement_service.register_facebook_group(self.sample_group)
         self.assertTrue(success)
         self.assertEqual(len(self.engagement_service.get_logged_groups()), 1)
 
     def test_duplicate_group_not_logged(self):
-        self.engagement_service.track_joined_group(self.sample_group)
+        self.engagement_service.register_facebook_group(self.sample_group)
         with self.assertRaises(ValueError):
-            self.engagement_service.track_joined_group(self.sample_group)
+            self.engagement_service.register_facebook_group(self.sample_group)
 
     def test_find_group_by_name(self):
-        self.engagement_service.track_joined_group(self.sample_group)
+        self.engagement_service.register_facebook_group(self.sample_group)
         found_group = self.engagement_service.find_group_by_name("Heart Health Group")
         self.assertIsNotNone(found_group)
         self.assertEqual(found_group.name, "Heart Health Group")

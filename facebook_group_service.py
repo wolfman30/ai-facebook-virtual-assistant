@@ -5,7 +5,7 @@ class FacebookGroupEngagementService:
     def __init__(self):
         self.logged_groups: list[FacebookGroup] = []
 
-    def track_joined_group(self, group: FacebookGroup):
+    def register_facebook_group(self, group: FacebookGroup):
         if any(logged_group.name == group.name for logged_group in self.logged_groups):
             raise ValueError(f"Group with name '{group.name}' is already logged.")
         self.logged_groups.append(group)

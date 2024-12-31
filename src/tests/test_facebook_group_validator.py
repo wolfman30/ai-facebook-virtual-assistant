@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from src.main.facebook_group import FacebookGroup
+from src.main.models.facebook_group import FacebookGroup
 from src.main.facebook_group_validator import FacebookGroupValidator
 
 
@@ -40,5 +40,5 @@ class TestFacebookGroupValidator(TestCase):
 
  
             
-if __name__ == '__main__':
+if __name__ == '__main__': # pragma: no cover
     unittest.main()

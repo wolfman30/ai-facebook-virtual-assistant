@@ -1,6 +1,6 @@
 import unittest
 from unittest import TestCase
-from src.main.facebook_group import FacebookGroup
+from src.main.models.facebook_group import FacebookGroup
 from src.main.facebook_group_repository import FacebookGroupRepository
 
 
@@ -32,5 +32,5 @@ class TestFacebookGroupRepository(TestCase):
         found_group = self.repository.find_by_name("Nonexistent Group")
         self.assertIsNone(found_group)
         
-if __name__ == '__main__':
+if __name__ == '__main__': # pragma: no cover
     unittest.main()

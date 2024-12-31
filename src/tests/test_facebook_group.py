@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from src.main.facebook_group import FacebookGroup
+from src.main.models.facebook_group import FacebookGroup
 
 
 class TestFacebookGroup(TestCase):
@@ -28,5 +28,5 @@ class TestFacebookGroup(TestCase):
     def test_is_rule_valid_with_empty_group(self):
         self.assertFalse(self.empty_group.is_rule_valid("Be kind"))
 
-if __name__ == '__main__':
+if __name__ == '__main__': # pragma: no cover
     unittest.main()

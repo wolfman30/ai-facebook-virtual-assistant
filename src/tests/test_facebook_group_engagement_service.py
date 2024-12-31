@@ -5,8 +5,8 @@ from unittest import TestCase
 
 from src.main.models.facebook_group import FacebookGroup
 from src.main.models.interaction import Interaction
-from src.main.facebook_group_repository import FacebookGroupRepository
-from src.main.facebook_group_service import FacebookGroupEngagementService
+from src.main.repositories.facebook_group_repository import FacebookGroupRepository
+from src.main.services.facebook_group_service import FacebookGroupEngagementService
 
 
 class TestFacebookGroupEngagement(TestCase):

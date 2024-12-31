@@ -2,7 +2,7 @@ import unittest
 from unittest import TestCase
 
 from src.main.models.facebook_group import FacebookGroup
-from src.main.facebook_group_validator import FacebookGroupValidator
+from src.main.validators.facebook_group_validator import FacebookGroupValidator
 
 
 class TestFacebookGroupValidator(TestCase):

@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 from src.main.models.facebook_group import FacebookGroup
-from src.main.facebook_group_repository import FacebookGroupRepository
+from src.main.repositories.facebook_group_repository import FacebookGroupRepository
 
 
 class TestFacebookGroupRepository(TestCase):

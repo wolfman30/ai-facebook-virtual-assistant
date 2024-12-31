@@ -1,6 +1,6 @@
 import csv
 from src.main.models.interaction import Interaction
-from src.main.facebook_group_validator import FacebookGroupValidator
+from src.main.validators.facebook_group_validator import FacebookGroupValidator
 
 class FacebookGroupEngagementService:
     def __init__(self, repository):

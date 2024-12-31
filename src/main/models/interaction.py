@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 
-
 @dataclass
 class Interaction: 
     interaction_type: str
@@ -8,5 +7,3 @@ class Interaction:
     content: str
     timestamp: str
     metadata: dict
-    
-    
